@@ -32,14 +32,15 @@ a {
 a:hover{
     /* background-color: green; */
     color: white;
+    text-decoration: none;
 }
 
-a span{
+a span.spanButton{
     position: absolute;
     display: block;
 }
 
-a span:nth-child(1){
+a span.spanButton:nth-child(1){
     top: 0;
     left: -100%;
     width: 100%;
@@ -47,12 +48,12 @@ a span:nth-child(1){
     background: linear-gradient(90deg, transparent,rgb(1, 56, 1));
 }
 
-a:hover span:nth-child(1){
+a:hover span.spanButton:nth-child(1){
     left: 100%;
     transition: 0.5s;
 }
 
-a span:nth-child(2){
+a span.spanButton:nth-child(2){
     top: -100%;
     right: 0;
     height: 100%;
@@ -60,12 +61,12 @@ a span:nth-child(2){
     background: linear-gradient(180deg, transparent,rgb(1, 56, 1));
 }
 
-a:hover span:nth-child(2){
+a:hover span.spanButton:nth-child(2){
     top: 100%;
     transition: 0.5s;
 }
 
-a span:nth-child(3){
+a span.spanButton:nth-child(3){
     bottom: 0;
     right: -100%;
     width: 100%;
@@ -73,12 +74,12 @@ a span:nth-child(3){
     background: linear-gradient(90deg, transparent,rgb(1, 56, 1));
 }
 
-a:hover span:nth-child(3){
+a:hover span.spanButton:nth-child(3){
     right: 100%;
     transition: 0.5s;
 }
 
-a span:nth-child(4){
+a span.spanButton:nth-child(4){
     bottom: -100%;
     left: 0;
     height: 100%;
@@ -86,9 +87,26 @@ a span:nth-child(4){
     background: linear-gradient(180deg, transparent,rgb(1, 56, 1));
 }
 
-a:hover span:nth-child(4){
+a:hover span.spanButton:nth-child(4){
     bottom: 100%;
     transition: 0.5s;
+}
+
+.container{
+    padding: 0px 0px 30px 0px;
+}
+
+div.item{
+    height: 300px;
+    position: relative;
+    background: green;
+}
+
+.contentItem{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 /* .aboutButton{
     background-color: transparent;
