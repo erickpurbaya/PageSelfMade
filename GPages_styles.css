@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(141, 141, 141);
+}
+
+.introContainer{
+    position: relative;
+    height: 100vh;
+}
+
+.introContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+img .ppimg {
+    border-radius: 50%;
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    overflow:hidden;
+    color: black;
+    transition: 0.3s;
+}
+
+a:hover{
+    /* background-color: green; */
+    color: white;
+}
+
+a span{
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,rgb(1, 56, 1));
+}
+
+a:hover span:nth-child(1){
+    left: 100%;
+    transition: 0.5s;
+}
+
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent,rgb(1, 56, 1));
+}
+
+a:hover span:nth-child(2){
+    top: 100%;
+    transition: 0.5s;
+}
+
+a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,rgb(1, 56, 1));
+}
+
+a:hover span:nth-child(3){
+    right: 100%;
+    transition: 0.5s;
+}
+
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent,rgb(1, 56, 1));
+}
+
+a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 0.5s;
+}
+/* .aboutButton{
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.aboutButton:hover{
+    color: rgb(230, 230, 230);
+} */
