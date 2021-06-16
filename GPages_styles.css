@@ -1,10 +1,16 @@
 body {
-    background-color: rgb(141, 141, 141);
+    background-image: url('header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .introContainer{
     position: relative;
     height: 100vh;
+    background-color:rgba(255, 255, 255, 0.616);
+    font-weight: bold;
 }
 
 .introContent{
@@ -13,23 +19,43 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    transition: 0.5s;
+    z-index: 2;
 }
 
-img .ppimg {
+img.ppimg {
     border-radius: 50%;
+}
+
+.btn{
+    background-color: rgba(0, 255, 0, 0);
+}
+
+.btn:hover{
+    background-color: rgba(145, 255, 0, 0);
 }
 
 a {
     position: relative;
     display: inline-block;
-    text-decoration: none;
+    text-decoration: none !important;
     padding: 10px 15px;
     overflow:hidden;
     color: black;
     transition: 0.3s;
 }
 
-a:hover{
+.btn:hover a{
+    /* background-color: green; */
+    color: white;
+    text-decoration: none;
+}
+/* 
+.introContainer:hover .introContent{
+    transform: translate(-150%, -50%);
+} */
+
+a:hover {
     /* background-color: green; */
     color: white;
     text-decoration: none;
@@ -48,7 +74,7 @@ a span.spanButton:nth-child(1){
     background: linear-gradient(90deg, transparent,rgb(1, 56, 1));
 }
 
-a:hover span.spanButton:nth-child(1){
+.btn:hover span.spanButton:nth-child(1){
     left: 100%;
     transition: 0.5s;
 }
@@ -61,7 +87,7 @@ a span.spanButton:nth-child(2){
     background: linear-gradient(180deg, transparent,rgb(1, 56, 1));
 }
 
-a:hover span.spanButton:nth-child(2){
+.btn:hover span.spanButton:nth-child(2){
     top: 100%;
     transition: 0.5s;
 }
@@ -74,7 +100,7 @@ a span.spanButton:nth-child(3){
     background: linear-gradient(90deg, transparent,rgb(1, 56, 1));
 }
 
-a:hover span.spanButton:nth-child(3){
+.btn:hover span.spanButton:nth-child(3){
     right: 100%;
     transition: 0.5s;
 }
@@ -87,40 +113,135 @@ a span.spanButton:nth-child(4){
     background: linear-gradient(180deg, transparent,rgb(1, 56, 1));
 }
 
-a:hover span.spanButton:nth-child(4){
+.btn:hover span.spanButton:nth-child(4){
     bottom: 100%;
     transition: 0.5s;
 }
 
+/* Main Content */
 .container{
-    padding: 0px 0px 30px 0px;
+    position:absolute;
+    width: 600px;  
+    top: 50%;
+    right: 50%;
+    transform: translate(100%, -50%);
+    opacity: 0%;
+    transition: 0.5s;
 }
 
+/* List Carousel */
+.carousel.slide{
+    width: 800px;
+}
+
+.row{
+    width:100%;
+}
+
+a.linkWork{
+    position: static;
+    display: inline;
+    text-decoration: none !important;
+    padding: 0px 0px;
+    color: black;
+}
+
+.ulCarousel{
+    list-style-type: none;
+    position: absolute;
+    padding-left: 0px;
+    bottom: 20px;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.ulCarousel li{
+    display: inline;
+    color: rgb(233, 233, 233);
+    background-color:chocolate;
+    border-radius: 10px;
+    width: 200px;
+    margin: 0px 8px;
+    padding: 15px;
+}
+
+.ulCarousel:hover li{
+    cursor: pointer;
+}
+
+
+/* Content Carousel */
 div.item{
-    height: 300px;
+    height: 600px;
+    width: 800px;
+    margin: auto;
     position: relative;
-    background: green;
 }
 
 .contentItem{
     position: absolute;
-    top: 50%;
+    text-align: center;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* .aboutButton{
-    background-color: transparent;
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
+
+ul.githubLinks{
+    margin-top: 25px;
+    width: 100%;
 }
 
-.aboutButton:hover{
-    color: rgb(230, 230, 230);
-} */
+.githubLinks{
+    text-align: center;
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.githubLinks li{
+    display: inline;
+    width: 33%;
+    background-color:chocolate; 
+    padding: 15px;
+}
+
+/* Footer */
+.footer{
+    background-color: rgb(46, 46, 46);
+    position: fixed;
+    bottom:0;
+    height: 120px;
+    width:100%;
+}
+
+.footerDesc{
+    text-align: center;
+    margin: 10px 0px;
+    color: white;
+    font-size: 24px;
+}
+
+.footerList{
+    list-style-type: none;
+    position: absolute;
+    padding-left: 0px;
+    bottom: 20px;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.footerList li{
+    display: inline;
+    background-color:chocolate;
+    border-radius: 10px;
+    width: 200px;
+    margin: 0px 8px;
+    padding: 15px;
+}
